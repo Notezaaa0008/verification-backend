@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_Invoice_eng:_Invoice_eng addData:DocumentState="Correct" addData:ImagePath="Invoice_00000027.pdf" xmlns:_Invoice_eng="http://www.abbyy.com/FlexiCapture/Schemas/Export/Invoice_eng.xsd">
+		<_InvoiceNumber addData:BlockRef="0001" addData:SuspiciousSymbols="0000000000000000">PLB-NC-000902-04</_InvoiceNumber>
+		<_InvoiceDate addData:BlockRef="0002" addData:SuspiciousSymbols="0000000000" addData:RecognizedValue="12.02.2004">2004-02-12</_InvoiceDate>
+		<_DeliveryAddress addData:BlockRef="0003" addData:SuspiciousSymbols="000000000000000000011000000000000000000000000000000000000000000000000000000000000000" addData:RecognizedValue="70, Avenue Ampere Montigny-le-Bretonneux F-78886 Saint-Quentin Yvelines Cedex France">70, Avenue Ampere
+Montigny-le-Bretonneux
+F-78886 Saint-Quentin
+Yvelines Cedex
+France</_DeliveryAddress>
+		<_TotalAmount addData:BlockRef="0004" addData:SuspiciousSymbols="000000" addData:RecognizedValue="950.00">950</_TotalAmount>
+		<_InvoiceTable addData:BlockRef="0005">
+			<_Reference addData:BlockRef="0006" addData:SuspiciousSymbols="000000000000000">AB.DO.GRAPHSITE</_Reference>
+			<_Designation addData:BlockRef="0007" addData:SuspiciousSymbols="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" addData:RecognizedValue="Film 4C for the publication &quot;Racing World&quot; Visual: PNSP 02 05 - Ref. 2004/021 Graphic designer honoraries 560010">Film 4C for the publication "Racing World"
+Visual: PNSP 02 05 - Ref. 2004/021
+Graphic designer honoraries
+560010</_Designation>
+			<_Unit addData:BlockRef="0008" addData:SuspiciousSymbols="000">Uni</_Unit>
+			<_Quantity addData:BlockRef="0009" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0010" addData:SuspiciousSymbols="000000" addData:RecognizedValue="400.00">400</_UnitPrice>
+			<_Total addData:BlockRef="0011" addData:SuspiciousSymbols="000000" addData:RecognizedValue="400.00">400</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0012">
+			<_Reference addData:BlockRef="0013" addData:SuspiciousSymbols="000000000000000">AB.DO.GRAPHSITE</_Reference>
+			<_Designation addData:BlockRef="0014" addData:SuspiciousSymbols="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" addData:RecognizedValue="Film 4C for the publication &quot;Talkies&quot; Visual: PNSP 01 03 - Ref. 2004/033 Graphic designer honoraries 560010">Film 4C for the publication "Talkies"
+Visual: PNSP 01 03 - Ref. 2004/033
+Graphic designer honoraries
+560010</_Designation>
+			<_Unit addData:BlockRef="0015" addData:SuspiciousSymbols="000">Uni</_Unit>
+			<_Quantity addData:BlockRef="0016" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0017" addData:SuspiciousSymbols="000000" addData:RecognizedValue="400.00">400</_UnitPrice>
+			<_Total addData:BlockRef="0018" addData:SuspiciousSymbols="000000" addData:RecognizedValue="400.00">400</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0019">
+			<_Reference addData:BlockRef="0020" addData:SuspiciousSymbols="000000000000000">AB.DO.GRAPHSITE</_Reference>
+			<_Designation addData:BlockRef="0021" addData:SuspiciousSymbols="0000000000000000000000000000000000000000000000" addData:RecognizedValue="Cost by DHL Graphic designer honoraries 560010">Cost by DHL
+Graphic designer honoraries
+560010</_Designation>
+			<_Unit addData:BlockRef="0022" addData:SuspiciousSymbols="000">Uni</_Unit>
+			<_Quantity addData:BlockRef="0023" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0024" addData:SuspiciousSymbols="000000" addData:RecognizedValue="150.00">150</_UnitPrice>
+			<_Total addData:BlockRef="0025" addData:SuspiciousSymbols="000000" addData:RecognizedValue="150.00">150</_Total>
+		</_InvoiceTable>
+		<_Company addData:BlockRef="0026" addData:SuspiciousSymbols="00100000000000000000000">J.Goldsmith manufacture</_Company>
+		<addData:AdditionalInfo>
+			<addData:BlocksInfo>
+				<addData:Blocks Id="0001">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="414" Right="874" Top="1061" Bottom="1112"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0002">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="547" Right="728" Top="1147" Bottom="1186"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0003">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="147" Right="597" Top="620" Bottom="865"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0004">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="2125" Right="2238" Top="2300" Bottom="2338"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0005">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="2242" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0006">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="511" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0007">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="511" Right="1292" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0008">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1292" Right="1502" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0009">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1502" Right="1662" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0010">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1662" Right="1942" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0011">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1942" Right="2242" Top="1561" Bottom="1862"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0012">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="2242" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0013">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="511" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0014">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="511" Right="1292" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0015">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1292" Right="1502" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0016">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1502" Right="1662" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0017">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1662" Right="1942" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0018">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1942" Right="2242" Top="1862" Bottom="2062"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0019">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="2242" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0020">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="149" Right="511" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0021">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="511" Right="1292" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0022">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1292" Right="1502" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0023">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1502" Right="1662" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0024">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1662" Right="1942" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0025">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1942" Right="2242" Top="2062" Bottom="2235"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0026">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="936" Right="1585" Top="427" Bottom="484"/>
+					</addData:Block>
+				</addData:Blocks>
+			</addData:BlocksInfo>
+		</addData:AdditionalInfo>
+	</_Invoice_eng:_Invoice_eng>
+</form:Documents>

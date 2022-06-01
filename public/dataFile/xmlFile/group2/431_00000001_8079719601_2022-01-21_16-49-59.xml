@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_INVOICE:_INVOICE addData:ImagePath="431_00000001_8079719601_2022-01-21_16-49-59.pdf" xmlns:_INVOICE="http://www.abbyy.com/FlexiCapture/Schemas/Export/INVOICE.xsd">
+		<_Document>
+			<_TaxInvoiceNo>D001-01100288</_TaxInvoiceNo>
+			<_InvoiceNo>8079719601</_InvoiceNo>
+			<_InvoiceDate>05.01.2022</_InvoiceDate>
+			<_TaxInvoiceDate>05.01.2022</_TaxInvoiceDate>
+			<_VendorName>บริษัท ปตท. น้ำมันและการค้าปลีก จำกัด (มหาชน)</_VendorName>
+			<_VendorAddress>555/2 ศูนย์เอนเนอร์ยี่คอมเพล็กซ์ อาคารบี ชั้นที่ 12 ถนนวิภาวดีรังสิต แขวงจตุจักร เขตจตุจักร กรุงเทพฯ 10900</_VendorAddress>
+			<_VendorTaxNo>0107561000013</_VendorTaxNo>
+			<_CustomerName>บริษัท ปตท. จำกัด(มหาชน)</_CustomerName>
+			<_CustomerAddress>555 ถนนวิภาวดีรังสิต แขวงจตุจักร เขตจตุจักร กรุงเทพมหานคร 10900</_CustomerAddress>
+			<_CustomerTaxID>0107544000108</_CustomerTaxID>
+			<_BusinessPlace>0173 คลังน้ำมันพระโขนง</_BusinessPlace>
+			<_Plant>H101 คลังผลิตภัณฑ์หล่อลื่นพระโขนง</_Plant>
+			<_Items>
+				<_ItemNo>1</_ItemNo>
+				<_ProductCode>400539</_ProductCode>
+				<_ProductName>น้ำกลั่น (12/0.780L)</_ProductName>
+				<_Quantity>3</_Quantity>
+				<_Unit>PAC</_Unit>
+				<_UnitPrice>131.0000</_UnitPrice>
+				<_Amount>393.00</_Amount>
+				<_VolAtDes/>
+				<_API/>
+			</_Items>
+			<_AmountBeforeVAT>393.00</_AmountBeforeVAT>
+			<_ValueAddTax>27.51</_ValueAddTax>
+			<_AmountAfterVAT>420.51</_AmountAfterVAT>
+			<_Issuer>true</_Issuer>
+			<_CorrectBy>false</_CorrectBy>
+			<_DueDate>15.03.2022</_DueDate>
+			<_CorrectByDate>false</_CorrectByDate>
+			<_SourceFile>\\ptt-ocrfile-t01.ptt.corp\OCRDev\PTT\Finance And Accounting\Oil Invoice\2 Inputs\BS\BCM\SDIN-8079719601.PDF</_SourceFile>
+			<_ChannelNormal>false</_ChannelNormal>
+			<_OriginalFileStatus>false</_OriginalFileStatus>
+			<_TotalAmount>420.51</_TotalAmount>
+			<_BatchID>431</_BatchID>
+			<_ShipTo>สำนักงานปลัดกระทรวงกลาโหม โดยโรงงาน เภสัชกรรมทหาร ศอพท. 183 ซ.ตรีมิตร ถ.พระราม4 เขตคลองเตย จ.กรุงเทพมหานคร 10110</_ShipTo>
+			<_CustomerCodeTmp>0010004514</_CustomerCodeTmp>
+		</_Document>
+	</_INVOICE:_INVOICE>
+</form:Documents>
