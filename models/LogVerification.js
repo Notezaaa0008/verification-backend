@@ -20,11 +20,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       endVerification: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: true
       },
       cancelVerification: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: true
       },
       oldValue: {
         type: DataTypes.TEXT,
@@ -46,8 +46,8 @@ module.exports = (sequelize, DataTypes) => {
         name: "userId",
         allowNull: false
       },
-      onDelete: "RESTRICT",
-      onUpdate: "RESTRICT"
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
     });
   };
 

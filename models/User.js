@@ -16,11 +16,12 @@ module.exports = (sequelize, DataTypes) => {
       },
       employeeId: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       department: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: false
       }
     },
     {
@@ -34,8 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         name: "roleId",
         allowNull: false
       },
-      onDelete: "RESTRICT",
-      onUpdate: "RESTRICT"
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
     });
 
     User.hasMany(models.LogSearch, {
@@ -43,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         name: "userId",
         allowNull: false
       },
-      onDelete: "RESTRICT",
-      onUpdate: "RESTRICT"
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
     });
 
     User.hasMany(models.LogVerification, {
@@ -52,8 +53,26 @@ module.exports = (sequelize, DataTypes) => {
         name: "userId",
         allowNull: false
       },
-      onDelete: "RESTRICT",
-      onUpdate: "RESTRICT"
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
+    });
+
+    User.hasMany(models.LogEasyOcr, {
+      foreignKey: {
+        name: "userId",
+        allowNull: false
+      },
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
+    });
+
+    User.hasMany(models.LogKmp, {
+      foreignKey: {
+        name: "userId",
+        allowNull: false
+      },
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
     });
   };
 

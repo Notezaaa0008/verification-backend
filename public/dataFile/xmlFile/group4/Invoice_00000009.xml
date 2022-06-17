@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<_Invoice_eng:_Invoice_eng addData:DocumentState="Correct" addData:ImagePath="Invoice_00000009.pdf" xmlns:_Invoice_eng="http://www.abbyy.com/FlexiCapture/Schemas/Export/Invoice_eng.xsd">
+		<_InvoiceNumber addData:BlockRef="0001" addData:SuspiciousSymbols="000000000">367890134</_InvoiceNumber>
+		<_InvoiceDate addData:BlockRef="0002" addData:SuspiciousSymbols="00000000" addData:RecognizedValue="21.07.06">2006-07-21</_InvoiceDate>
+		<_DeliveryAddress addData:BlockRef="0003" addData:SuspiciousSymbols="10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100" addData:RecognizedValue=".Clear Sky&quot; Mr. Brian Jones USA, Columbia, Washington DC, Roman Street, Building 16, Office 2 Co-1167">.Clear Sky"
+Mr. Brian Jones
+USA, Columbia, Washington
+DC,
+Roman Street,
+Building 16, Office 2
+Co-1167</_DeliveryAddress>
+		<_TotalAmount addData:BlockRef="0004" addData:SuspiciousSymbols="0000100" addData:RecognizedValue="9146.00">9146</_TotalAmount>
+		<_InvoiceTable addData:BlockRef="0005">
+			<_Reference addData:BlockRef="0006" addData:SuspiciousSymbols="0000">A-14</_Reference>
+			<_Designation addData:BlockRef="0007" addData:SuspiciousSymbols="0000000011">Model 6210</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0008" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0009" addData:SuspiciousSymbols="00">78</_UnitPrice>
+			<_Total addData:BlockRef="0010" addData:SuspiciousSymbols="00">78</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0011">
+			<_Reference addData:BlockRef="0012" addData:SuspiciousSymbols="0000">B-25</_Reference>
+			<_Designation addData:BlockRef="0013" addData:SuspiciousSymbols="0000001100">Model 123e</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0014" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0015" addData:SuspiciousSymbols="000">120</_UnitPrice>
+			<_Total addData:BlockRef="0016" addData:SuspiciousSymbols="000">120</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0017">
+			<_Reference addData:BlockRef="0018" addData:SuspiciousSymbols="000000">K-130U</_Reference>
+			<_Designation addData:BlockRef="0019" addData:SuspiciousSymbols="000000000">Model 600</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0020" addData:SuspiciousSymbols="0">2</_Quantity>
+			<_UnitPrice addData:BlockRef="0021" addData:SuspiciousSymbols="00">95</_UnitPrice>
+			<_Total addData:BlockRef="0022" addData:SuspiciousSymbols="000">190</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0023">
+			<_Reference addData:BlockRef="0024" addData:SuspiciousSymbols="0000">H-47</_Reference>
+			<_Designation addData:BlockRef="0025" addData:SuspiciousSymbols="000000000">Model e35</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0026" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0027" addData:SuspiciousSymbols="00">68</_UnitPrice>
+			<_Total addData:BlockRef="0028" addData:SuspiciousSymbols="00">68</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0029">
+			<_Reference addData:BlockRef="0030" addData:SuspiciousSymbols="0000">M-02</_Reference>
+			<_Designation addData:BlockRef="0031" addData:SuspiciousSymbols="00000000000">Model 960gl</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0032" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0033" addData:SuspiciousSymbols="000">140</_UnitPrice>
+			<_Total addData:BlockRef="0034" addData:SuspiciousSymbols="000">140</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0035">
+			<_Reference addData:BlockRef="0036" addData:SuspiciousSymbols="00110">K-140</_Reference>
+			<_Designation addData:BlockRef="0037" addData:SuspiciousSymbols="0000001110000000000000" addData:RecognizedValue="Model 110z Page 1 of 3">Model 110z
+Page 1 of 3</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0038" addData:SuspiciousSymbols="0">2</_Quantity>
+			<_UnitPrice addData:BlockRef="0039" addData:SuspiciousSymbols="000">175</_UnitPrice>
+			<_Total addData:BlockRef="0040" addData:SuspiciousSymbols="000">350</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0041">
+			<_Reference addData:BlockRef="0042" addData:SuspiciousSymbols="00000">AC-23</_Reference>
+			<_Designation addData:BlockRef="0043" addData:SuspiciousSymbols="0000000000">Model 4800</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0044" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0045" addData:SuspiciousSymbols="000">500</_UnitPrice>
+			<_Total addData:BlockRef="0046" addData:SuspiciousSymbols="000">500</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0047">
+			<_Reference addData:BlockRef="0048" addData:SuspiciousSymbols="00011">DX-15</_Reference>
+			<_Designation addData:BlockRef="0049" addData:SuspiciousSymbols="00000000000">Model e 510</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0050" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0051" addData:SuspiciousSymbols="000">600</_UnitPrice>
+			<_Total addData:BlockRef="0052" addData:SuspiciousSymbols="000">600</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0053">
+			<_Reference addData:BlockRef="0054" addData:SuspiciousSymbols="00000">BU-16</_Reference>
+			<_Designation addData:BlockRef="0055" addData:SuspiciousSymbols="00000000000">Model PE120</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0056" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0057" addData:SuspiciousSymbols="000">500</_UnitPrice>
+			<_Total addData:BlockRef="0058" addData:SuspiciousSymbols="000">500</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0059">
+			<_Reference addData:BlockRef="0060" addData:SuspiciousSymbols="0000">GH-1</_Reference>
+			<_Designation addData:BlockRef="0061" addData:SuspiciousSymbols="1111100000000">Model CX6900F</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0062" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0063" addData:SuspiciousSymbols="000">550</_UnitPrice>
+			<_Total addData:BlockRef="0064" addData:SuspiciousSymbols="000">550</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0065">
+			<_Reference addData:BlockRef="0066" addData:SuspiciousSymbols="00000">NJ-48</_Reference>
+			<_Designation addData:BlockRef="0067" addData:SuspiciousSymbols="0000000000">Model ST64</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0068" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0069" addData:SuspiciousSymbols="000">400</_UnitPrice>
+			<_Total addData:BlockRef="0070" addData:SuspiciousSymbols="000">400</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0071">
+			<_Reference addData:BlockRef="0072" addData:SuspiciousSymbols="00000">LO-90</_Reference>
+			<_Designation addData:BlockRef="0073" addData:SuspiciousSymbols="0000000000">Model 3600</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0074" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0075" addData:SuspiciousSymbols="000">200</_UnitPrice>
+			<_Total addData:BlockRef="0076" addData:SuspiciousSymbols="000">200</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0077">
+			<_Reference addData:BlockRef="0078" addData:SuspiciousSymbols="00011">JT-13</_Reference>
+			<_Designation addData:BlockRef="0079" addData:SuspiciousSymbols="000000000000">Model t-2500</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0080" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0081" addData:SuspiciousSymbols="000">350</_UnitPrice>
+			<_Total addData:BlockRef="0082" addData:SuspiciousSymbols="000">350</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0083">
+			<_Reference addData:BlockRef="0084" addData:SuspiciousSymbols="00000">LP-67</_Reference>
+			<_Designation addData:BlockRef="0085" addData:SuspiciousSymbols="00000000000">Model 9950F</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0086" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0087" addData:SuspiciousSymbols="000">600</_UnitPrice>
+			<_Total addData:BlockRef="0088" addData:SuspiciousSymbols="000">600</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0089">
+			<_Reference addData:BlockRef="0090" addData:SuspiciousSymbols="00000">NW-75</_Reference>
+			<_Designation addData:BlockRef="0091" addData:SuspiciousSymbols="0000000000">Model 5600</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0092" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0093" addData:SuspiciousSymbols="000">700</_UnitPrice>
+			<_Total addData:BlockRef="0094" addData:SuspiciousSymbols="000">700</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0095">
+			<_Reference addData:BlockRef="0096" addData:SuspiciousSymbols="00000">AY-34</_Reference>
+			<_Designation addData:BlockRef="0097" addData:SuspiciousSymbols="00000100000">Model X9350</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0098" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0099" addData:SuspiciousSymbols="000">300</_UnitPrice>
+			<_Total addData:BlockRef="0100" addData:SuspiciousSymbols="000">300</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0101">
+			<_Reference addData:BlockRef="0102" addData:SuspiciousSymbols="00000">FO-40</_Reference>
+			<_Designation addData:BlockRef="0103" addData:SuspiciousSymbols="0000000000000">Model 4800 TA</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0104" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0105" addData:SuspiciousSymbols="000">300</_UnitPrice>
+			<_Total addData:BlockRef="0106" addData:SuspiciousSymbols="000">300</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0107">
+			<_Reference addData:BlockRef="0108" addData:SuspiciousSymbols="00000">EH-45</_Reference>
+			<_Designation addData:BlockRef="0109" addData:SuspiciousSymbols="000000000000">Model HZ8 TB</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0110" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0111" addData:SuspiciousSymbols="000">600</_UnitPrice>
+			<_Total addData:BlockRef="0112" addData:SuspiciousSymbols="000">600</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0113">
+			<_Reference addData:BlockRef="0114" addData:SuspiciousSymbols="00000">VR-03</_Reference>
+			<_Designation addData:BlockRef="0115" addData:SuspiciousSymbols="0000000111">Model S111</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0116" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0117" addData:SuspiciousSymbols="000">400</_UnitPrice>
+			<_Total addData:BlockRef="0118" addData:SuspiciousSymbols="000">400</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0119">
+			<_Reference addData:BlockRef="0120" addData:SuspiciousSymbols="00000">SU-67</_Reference>
+			<_Designation addData:BlockRef="0121" addData:SuspiciousSymbols="0000110011">Modell OOE</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0122" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0123" addData:SuspiciousSymbols="000">300</_UnitPrice>
+			<_Total addData:BlockRef="0124" addData:SuspiciousSymbols="000">300</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0125">
+			<_Reference addData:BlockRef="0126" addData:SuspiciousSymbols="00000">MK-41</_Reference>
+			<_Designation addData:BlockRef="0127" addData:SuspiciousSymbols="0000000000">Model 7015</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0128" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0129" addData:SuspiciousSymbols="000">500</_UnitPrice>
+			<_Total addData:BlockRef="0130" addData:SuspiciousSymbols="000">500</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0131">
+			<_Reference addData:BlockRef="0132" addData:SuspiciousSymbols="00000">BQ-89</_Reference>
+			<_Designation addData:BlockRef="0133" addData:SuspiciousSymbols="0000001100">Model 130z</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0134" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0135" addData:SuspiciousSymbols="000">600</_UnitPrice>
+			<_Total addData:BlockRef="0136" addData:SuspiciousSymbols="000">600</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0137">
+			<_Reference addData:BlockRef="0138" addData:SuspiciousSymbols="00011">MA-11</_Reference>
+			<_Designation addData:BlockRef="0139" addData:SuspiciousSymbols="0000001100000">Model 10000XL</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0140" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0141" addData:SuspiciousSymbols="000">200</_UnitPrice>
+			<_Total addData:BlockRef="0142" addData:SuspiciousSymbols="000">200</_Total>
+		</_InvoiceTable>
+		<_InvoiceTable addData:BlockRef="0143">
+			<_Reference addData:BlockRef="0144" addData:SuspiciousSymbols="00000">LE-01</_Reference>
+			<_Designation addData:BlockRef="0145" addData:SuspiciousSymbols="00000000000">Model 2580C</_Designation>
+			<_Unit/>
+			<_Quantity addData:BlockRef="0146" addData:SuspiciousSymbols="0">1</_Quantity>
+			<_UnitPrice addData:BlockRef="0147" addData:SuspiciousSymbols="000">600</_UnitPrice>
+			<_Total addData:BlockRef="0148" addData:SuspiciousSymbols="000">600</_Total>
+		</_InvoiceTable>
+		<_Company addData:BlockRef="0149" addData:SuspiciousSymbols="0000000000000000000">Chronical Solutions</_Company>
+		<addData:AdditionalInfo>
+			<addData:BlocksInfo>
+				<addData:Blocks Id="0001">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="512" Right="727" Top="633" Bottom="677"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0002">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="485" Right="657" Top="728" Bottom="772"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0003">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1605" Right="2037" Top="1484" Bottom="1806"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0004">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1635" Right="1794" Top="2212" Bottom="2262"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0005">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0006">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0007">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0008">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0009">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0010">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="2267" Bottom="2523"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0011">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0012">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0013">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0014">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0015">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0016">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="2523" Bottom="2691"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0017">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0018">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0019">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0020">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0021">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0022">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="2691" Bottom="2858"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0023">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0024">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0025">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0026">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0027">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0028">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="2858" Bottom="3023"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0029">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0030">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0031">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0032">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0033">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0034">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="3023" Bottom="3188"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0035">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="1918" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0036">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="264" Right="559" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0037">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="559" Right="1059" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0038">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1059" Right="1324" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0039">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1324" Right="1737" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0040">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1737" Right="1918" Top="3188" Bottom="3389"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0041">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0042">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0043">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0044">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0045">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0046">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1044" Bottom="1195"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0047">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0048">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0049">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0050">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0051">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0052">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1195" Bottom="1361"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0053">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0054">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0055">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0056">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0057">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0058">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1361" Bottom="1527"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0059">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0060">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0061">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0062">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0063">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0064">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1527" Bottom="1693"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0065">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0066">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0067">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0068">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0069">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0070">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1693" Bottom="1859"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0071">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0072">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0073">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0074">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0075">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0076">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="1859" Bottom="2025"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0077">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0078">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0079">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0080">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0081">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0082">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2025" Bottom="2191"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0083">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0084">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0085">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0086">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0087">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0088">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2191" Bottom="2358"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0089">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0090">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0091">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0092">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0093">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0094">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2358" Bottom="2525"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0095">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0096">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0097">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0098">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0099">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0100">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2525" Bottom="2692"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0101">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0102">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0103">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0104">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0105">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0106">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2692" Bottom="2860"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0107">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="2021" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0108">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="348" Right="546" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0109">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="546" Right="1046" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0110">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1046" Right="1313" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0111">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1313" Right="1726" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0112">
+					<addData:Block PageIndex="2">
+						<addData:Rect Left="1726" Right="2021" Top="2860" Bottom="2907"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0113">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0114">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0115">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0116">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0117">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0118">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1118" Bottom="1267"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0119">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0120">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0121">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0122">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0123">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0124">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1267" Bottom="1435"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0125">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0126">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0127">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0128">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0129">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0130">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1435" Bottom="1600"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0131">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0132">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0133">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0134">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0135">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0136">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1600" Bottom="1767"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0137">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0138">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0139">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0140">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0141">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0142">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1767" Bottom="1932"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0143">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="2023" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0144">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="353" Right="549" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0145">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="549" Right="1049" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0146">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1049" Right="1315" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0147">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1315" Right="1729" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0148">
+					<addData:Block PageIndex="3">
+						<addData:Rect Left="1729" Right="2023" Top="1932" Bottom="2183"/>
+					</addData:Block>
+				</addData:Blocks>
+				<addData:Blocks Id="0149">
+					<addData:Block PageIndex="1">
+						<addData:Rect Left="1725" Right="2092" Top="528" Bottom="573"/>
+					</addData:Block>
+				</addData:Blocks>
+			</addData:BlocksInfo>
+		</addData:AdditionalInfo>
+	</_Invoice_eng:_Invoice_eng>
+</form:Documents>

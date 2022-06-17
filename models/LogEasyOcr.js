@@ -1,16 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-  const Role = sequelize.define(
-    "Role",
+  const LogEasyOcr = sequelize.define(
+    "LogEasyOcr",
     {
-      roleName: {
+      statusOcr: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      roleDescription: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      permission: {
+      documentType: {
         type: DataTypes.STRING,
         allowNull: false
       }
@@ -20,10 +16,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  Role.associate = models => {
-    Role.hasMany(models.User, {
+  LogEasyOcr.associate = models => {
+    LogEasyOcr.belongsTo(models.User, {
       foreignKey: {
-        name: "roleId",
+        name: "userId",
         allowNull: false
       },
       onDelete: "CASCADE",
@@ -31,5 +27,5 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  return Role;
+  return LogEasyOcr;
 };

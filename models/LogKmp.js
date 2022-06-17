@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const LogSearch = sequelize.define(
-    "LogSearch",
+  const LogKmp = sequelize.define(
+    "LogKmp",
     {
-      searchText: {
-        type: DataTypes.TEXT,
+      statusKmp: {
+        type: DataTypes.STRING,
         allowNull: false
       }
     },
@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  LogSearch.associate = models => {
-    LogSearch.belongsTo(models.User, {
+  LogKmp.associate = models => {
+    LogKmp.belongsTo(models.User, {
       foreignKey: {
         name: "userId",
         allowNull: false
@@ -23,5 +23,5 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  return LogSearch;
+  return LogKmp;
 };
