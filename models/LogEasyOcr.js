@@ -2,6 +2,14 @@ module.exports = (sequelize, DataTypes) => {
   const LogEasyOcr = sequelize.define(
     "LogEasyOcr",
     {
+      projectName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      documentName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       statusOcr: {
         type: DataTypes.STRING,
         allowNull: false

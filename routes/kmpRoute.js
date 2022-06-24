@@ -3,6 +3,7 @@ const kmpController = require("../controllers/kmpController");
 
 const router = express.Router();
 
-router.get("/getLog", kmpController.getLog);
+router.post("/create", kmpController.createLog);
+router.get("/getLog/:params", kmpController.getLog);
 
 module.exports = router;

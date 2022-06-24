@@ -57,6 +57,15 @@ module.exports = (sequelize, DataTypes) => {
       onUpdate: "CASCADE"
     });
 
+    // User.hasMany(models.LogVerification, {
+    //   foreignKey: {
+    //     name: "editorId",
+    //     allowNull: true
+    //   },
+    //   onDelete: "CASCADE",
+    //   onUpdate: "CASCADE"
+    // });
+
     User.hasMany(models.LogEasyOcr, {
       foreignKey: {
         name: "userId",

@@ -11,15 +11,10 @@ exports.createLogSearch = async (req, res, next) => {
   }
 };
 
-exports.updateLogSearch = async (req, res, next) => {
-  try {
-  } catch (err) {
-    next(err);
-  }
-};
-
 exports.getLogSearch = async (req, res, next) => {
   try {
+    let logSearch = await LogSearch.findAll();
+    res.status(200).json(logSearch);
   } catch (err) {
     next(err);
   }

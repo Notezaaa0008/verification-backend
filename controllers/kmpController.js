@@ -1,8 +1,21 @@
 const { LogKmp, User } = require("../models");
+const { Op } = require("sequelize");
+
+exports.createLog = async (req, res, next) => {
+  try {
+    let { statusKmp, userId, projectName, documentName } = req.body;
+    let create = await LogKmp.create({ statusKmp, userId, projectName, documentName });
+    res.status(201).json(create);
+  } catch (err) {
+    next(err);
+  }
+};
 
 exports.getLog = async (req, res, next) => {
   try {
+    let { params } = req.params;
     let data = await LogKmp.findAll({
+      where: { [Op.not]: [{ statusKmp: "inProgress" }] },
       include: [{ model: User, attributes: ["firstName", "lastName", "department"] }]
     });
     if (data.length > 0) {
@@ -42,8 +55,29 @@ exports.getLog = async (req, res, next) => {
       });
 
       let uploadRankByUser = userRank.sort(compare);
+      if (uploadRankByUser.length > 10) {
+        uploadRankByUser = uploadRankByUser.slice(0, 10);
+      }
+
       let uploadRankByDepartment = departmentRank.sort(compare);
-      res.status(200).json({ sendToKmp: data.length, success, fail, uploadRankByUser, uploadRankByDepartment });
+      if (uploadRankByDepartment.length > 10) {
+        uploadRankByDepartment = uploadRankByDepartment.slice(0, 10);
+      }
+
+      if (params === "sendToKmp") {
+        res.status(200).json({ sendToKmp: "sendToKmp", num: data.length });
+      } else if (params === "summaryStatus") {
+        res.status(200).json({
+          summaryStatus: [
+            { status: "success", num: success },
+            { status: "fail", num: fail }
+          ]
+        });
+      } else if (params === "userRank") {
+        res.status(200).json({ uploadRankByUser });
+      } else if (params === "departmentRank") {
+        res.status(200).json({ uploadRankByDepartment });
+      }
     } else {
       res.status(400).json({ message: "Not found data in log kmp" });
     }

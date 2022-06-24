@@ -19,6 +19,7 @@ const logSearchRoute = require("./routes/logSearchRoute");
 const abbyyRoute = require("./routes/abbyyRoute");
 const userRoute = require("./routes/userRoute");
 const roleRoute = require("./routes/roleRoute");
+const suggestRoute = require("./routes/suggestRoute");
 
 const app = express();
 const server = http.Server(app);
@@ -38,6 +39,7 @@ app.use("/easyOcr", easyOcrRoute);
 app.use("/kmp", kmpRoute);
 app.use("/logSearch", logSearchRoute);
 app.use("/abbyy", abbyyRoute);
+app.use("/suggest", suggestRoute);
 
 app.use("/getPdf/:projectName/:documentName", async (req, res, next) => {
   try {

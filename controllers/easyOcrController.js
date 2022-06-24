@@ -1,8 +1,21 @@
 const { LogEasyOcr, User } = require("../models");
+const { Op } = require("sequelize");
+
+exports.createLog = async (req, res, next) => {
+  try {
+    let { statusOcr, documentType, userId, projectName, documentName } = req.body;
+    let create = await LogEasyOcr.create({ statusOcr, documentType, userId, projectName, documentName });
+    res.status(201).json(create);
+  } catch (err) {
+    next(err);
+  }
+};
 
 exports.getLog = async (req, res, next) => {
   try {
+    let { params } = req.params;
     let data = await LogEasyOcr.findAll({
+      where: { [Op.not]: [{ statusOcr: "inProgress" }] },
       include: [{ model: User, attributes: ["firstName", "lastName", "department"] }]
     });
 
@@ -19,7 +32,7 @@ exports.getLog = async (req, res, next) => {
         if (a.upload < b.upload) return 1;
       };
 
-      data.array.forEach(item => {
+      data.forEach(item => {
         if (userRank.length === 0) {
           userRank = [...userRank, { user: `${item.User.firstName} ${item.User.lastName}`, upload: 1 }];
         } else {
@@ -55,9 +68,31 @@ exports.getLog = async (req, res, next) => {
       });
 
       let uploadRankByUser = userRank.sort(compare);
+      if (uploadRankByUser.length > 10) {
+        uploadRankByUser = uploadRankByUser.slice(0, 10);
+      }
       let uploadRankByDepartment = departmentRank.sort(compare);
+      if (uploadRankByDepartment.length > 10) {
+        uploadRankByDepartment = uploadRankByDepartment.slice(0, 10);
+      }
       let documentTypeRanks = documentTypeRank.sort(compare);
-      res.status(200).json({ success, fail, userRank, uploadRankByUser, uploadRankByDepartment, documentTypeRanks });
+      if (documentTypeRanks.length > 10) {
+        documentTypeRanks = documentTypeRanks.slice(0, 10);
+      }
+      if (params === "userRank") {
+        res.status(200).json({ uploadRankByUser });
+      } else if (params === "departmentRank") {
+        res.status(200).json({ uploadRankByDepartment });
+      } else if (params === "documentTypeRanks") {
+        res.status(200).json({ documentTypeRanks });
+      } else if (params === "summaryStatus") {
+        res.status(200).json({
+          summaryStatus: [
+            { status: "success", num: success },
+            { status: "fail", num: fail }
+          ]
+        });
+      }
     } else {
       res.status(400).json({ message: "Not found data in log easy OCR" });
     }

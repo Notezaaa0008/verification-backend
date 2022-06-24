@@ -49,6 +49,15 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: "CASCADE",
       onUpdate: "CASCADE"
     });
+
+    // LogVerification.belongsTo(models.User, {
+    //   foreignKey: {
+    //     name: "editorId",
+    //     allowNull: true
+    //   },
+    //   onDelete: "CASCADE",
+    //   onUpdate: "CASCADE"
+    // });
   };
 
   return LogVerification;

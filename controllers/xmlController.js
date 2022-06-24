@@ -57,22 +57,26 @@ exports.getListDoc = async (req, res, next) => {
   }
 };
 
-exports.getData = async (req, res, next) => {
+exports.getEditData = async (req, res, next) => {
   try {
     const { projectName, documentName } = req.params;
-    let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFile`);
-    if (!xmlFiles.includes(projectName)) {
-      res.status(400).json({ message: `The ${projectName} does NOT exist` });
-    } else {
-      let project = fs.readdirSync(`./public/dataFile/xmlFile/${projectName}`);
-      if (!project.includes(`${documentName}.xml`)) {
-        res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+
+    let dataLog = await LogVerification.findOne({
+      where: { editorId: 2, projectName, documentName, documentStatus: "edit" }
+    });
+    if (dataLog) {
+      let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFileVerified`);
+      if (!xmlFiles.includes(projectName)) {
+        res.status(400).json({ message: `The ${projectName} does NOT exist` });
       } else {
-        let dataLog = await LogVerification.findOne({
-          where: { [Op.and]: [{ userId: 1 }, { documentName }, { documentStatus: "verifying" }] }
-        });
-        if (dataLog) {
-          let xml_string = fs.readFileSync(`./public/dataFile/xmlFile/${projectName}/${documentName}.xml`, "utf8");
+        let project = fs.readdirSync(`./public/dataFile/xmlFileVerified/${projectName}`);
+        if (!project.includes(`${documentName}.xml`)) {
+          res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+        } else {
+          let xml_string = fs.readFileSync(
+            `./public/dataFile/xmlFileVerified/${projectName}/${documentName}.xml`,
+            "utf8"
+          );
           parser.parseString(xml_string, function (error, result) {
             if (error === null) {
               res.status(200).json({ data: result, logVerifyId: dataLog.id });
@@ -80,12 +84,72 @@ exports.getData = async (req, res, next) => {
               console.log(error);
             }
           });
-        } else {
-          res.status(400).json({
-            message: `Not found data in the log verify. Due to data not create or someone has reviewed this ${documentName}.`
-          });
         }
       }
+    } else {
+      res.status(400).json({
+        message: `This document cannot be edited. Due to data not create or someone has edited this ${documentName}.`
+      });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.getData = async (req, res, next) => {
+  try {
+    const { projectName, documentName } = req.params;
+
+    let dataLog = await LogVerification.findOne({
+      where: { userId: 2, projectName, documentName, documentStatus: { [Op.or]: ["verifying", "verified"] } }
+    });
+    if (dataLog) {
+      if (dataLog.documentStatus === "verifying") {
+        let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFile`);
+        if (!xmlFiles.includes(projectName)) {
+          res.status(400).json({ message: `The ${projectName} does NOT exist` });
+        } else {
+          let project = fs.readdirSync(`./public/dataFile/xmlFile/${projectName}`);
+          if (!project.includes(`${documentName}.xml`)) {
+            res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+          } else {
+            let xml_string = fs.readFileSync(`./public/dataFile/xmlFile/${projectName}/${documentName}.xml`, "utf8");
+            parser.parseString(xml_string, function (error, result) {
+              if (error === null) {
+                res.status(200).json({ data: result, logVerifyId: dataLog.id });
+              } else {
+                console.log(error);
+              }
+            });
+          }
+        }
+      } else if (dataLog.documentStatus === "verified") {
+        let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFileVerified`);
+        if (!xmlFiles.includes(projectName)) {
+          res.status(400).json({ message: `The ${projectName} does NOT exist` });
+        } else {
+          let project = fs.readdirSync(`./public/dataFile/xmlFileVerified/${projectName}`);
+          if (!project.includes(`${documentName}.xml`)) {
+            res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+          } else {
+            let xml_string = fs.readFileSync(
+              `./public/dataFile/xmlFileVerified/${projectName}/${documentName}.xml`,
+              "utf8"
+            );
+            parser.parseString(xml_string, function (error, result) {
+              if (error === null) {
+                res.status(200).json({ data: result, logVerifyId: dataLog.id });
+              } else {
+                console.log(error);
+              }
+            });
+          }
+        }
+      }
+    } else {
+      res.status(400).json({
+        message: `Not found data in the log verify. Due to data not create or someone has reviewed this ${documentName}.`
+      });
     }
   } catch (err) {
     next(err);
@@ -94,7 +158,7 @@ exports.getData = async (req, res, next) => {
 
 exports.updateDoc = async (req, res, next) => {
   try {
-    const { projectName, documentName } = req.params;
+    const { projectName, documentName, oldValue, currentValue } = req.params;
 
     let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFile`);
     if (!xmlFiles.includes(projectName)) {
@@ -132,7 +196,12 @@ exports.updateDoc = async (req, res, next) => {
 
           const date = new Date();
           await LogVerification.update(
-            { documentStatus: "verified", endVerification: date },
+            {
+              documentStatus: "verified",
+              endVerification: date,
+              oldValue: JSON.stringify(oldValue),
+              currentValue: JSON.stringify(currentValue)
+            },
             { where: { id: req.body.logVerifyId } }
           );
           next();
@@ -141,6 +210,32 @@ exports.updateDoc = async (req, res, next) => {
             message: `Not found data in the log verify.`
           });
         }
+      }
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.original = async (req, res, next) => {
+  try {
+    let { documentName, projectName } = req.body;
+    let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFile`);
+    if (!xmlFiles.includes(projectName)) {
+      res.status(400).json({ message: `The ${projectName} does NOT exist` });
+    } else {
+      let project = fs.readdirSync(`./public/dataFile/xmlFile/${projectName}`);
+      if (!project.includes(`${documentName}.xml`)) {
+        res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+      } else {
+        let xml_string = fs.readFileSync(`./public/dataFile/xmlFile/${projectName}/${documentName}.xml`, "utf8");
+        parser.parseString(xml_string, function (error, result) {
+          if (error === null) {
+            res.status(200).json({ data: result });
+          } else {
+            console.log(error);
+          }
+        });
       }
     }
   } catch (err) {

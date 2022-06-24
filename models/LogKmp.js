@@ -2,6 +2,14 @@ module.exports = (sequelize, DataTypes) => {
   const LogKmp = sequelize.define(
     "LogKmp",
     {
+      projectName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      documentName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       statusKmp: {
         type: DataTypes.STRING,
         allowNull: false
