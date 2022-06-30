@@ -6,7 +6,7 @@ const cron = require("node-cron");
 
 const parser = new xml2js.Parser();
 
-cron.schedule("0 0 * * *", async function cancelOnTime(req, res, next) {
+cron.schedule("0 0 * * *", async function cancelTimeOut(req, res, next) {
   try {
     let data = await LogVerification.findAll({
       where: {
@@ -15,11 +15,9 @@ cron.schedule("0 0 * * *", async function cancelOnTime(req, res, next) {
     });
     if (data.length > 0) {
       let day = 7;
-      date.forEach(async item => {
+      data.forEach(async item => {
         let oldDate = new Date(item.startVerification);
-        let getTimeOldDate = new Date(
-          `${oldDate.getFullYear()}, ${oldDate.getMonth()}, ${oldDate.getDate()}`
-        ).getTime();
+        let getTimeOldDate = new Date(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate()).getTime();
         let cancelDate = new Date(getTimeOldDate + 3600 * 1000 * 24 * day);
         let currentDate = new Date();
         if (
@@ -27,7 +25,7 @@ cron.schedule("0 0 * * *", async function cancelOnTime(req, res, next) {
           `${cancelDate.getDate()}/${cancelDate.getMonth() + 1}/${cancelDate.getFullYear()}`
         ) {
           await LogVerification.update(
-            { documentStatus: "cancel", cancelVerification: date },
+            { documentStatus: "cancel", cancelVerification: currentDate },
             { where: { id: item.id } }
           );
           console.log(`cancel verifying due to time out.`);
