@@ -181,21 +181,25 @@ exports.getLog = async (req, res, next) => {
         }
       });
 
-      let uploadRankByUser = userRank.sort(compare);
-      if (uploadRankByUser.length > 10) {
-        uploadRankByUser = uploadRankByUser.slice(0, 10);
-      }
-      let uploadRankByDepartment = departmentRank.sort(compare);
-      if (uploadRankByDepartment.length > 10) {
-        uploadRankByDepartment = uploadRankByDepartment.slice(0, 10);
-      }
       if (params === "sendToKmp") {
         res.status(200).json({ sendToKmp });
       } else if (params === "summaryStatus") {
         res.status(200).json({ statusKmp });
       } else if (params === "userRank") {
+        let uploadRankByUser = userRank.sort(compare);
+        uploadRankByUser.forEach(item => {
+          if (item.user.length > 10) {
+            item.user = item.user.slice(0, 10);
+          }
+        });
         res.status(200).json({ uploadRankByUser });
       } else if (params === "departmentRank") {
+        let uploadRankByDepartment = departmentRank.sort(compare);
+        uploadRankByDepartment.forEach(item => {
+          if (item.department.length > 10) {
+            item.department = item.department.slice(0, 10);
+          }
+        });
         res.status(200).json({ uploadRankByDepartment });
       }
     } else {

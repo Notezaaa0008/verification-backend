@@ -188,23 +188,29 @@ exports.getLog = async (req, res, next) => {
         }
       });
 
-      let uploadRankByUser = userRank.sort(compare);
-      if (uploadRankByUser.length > 10) {
-        uploadRankByUser = uploadRankByUser.slice(0, 10);
-      }
-      let uploadRankByDepartment = departmentRank.sort(compare);
-      if (uploadRankByDepartment.length > 10) {
-        uploadRankByDepartment = uploadRankByDepartment.slice(0, 10);
-      }
-      let documentTypeRanks = documentTypeRank.sort(compare);
-      if (documentTypeRanks.length > 10) {
-        documentTypeRanks = documentTypeRanks.slice(0, 10);
-      }
       if (params === "userRank") {
+        let uploadRankByUser = userRank.sort(compare);
+        uploadRankByUser.forEach(item => {
+          if (item.user.length > 10) {
+            item.user = item.user.slice(0, 10);
+          }
+        });
         res.status(200).json({ uploadRankByUser });
       } else if (params === "departmentRank") {
+        let uploadRankByDepartment = departmentRank.sort(compare);
+        uploadRankByDepartment.forEach(item => {
+          if (item.department.length > 10) {
+            item.department = item.department.slice(0, 10);
+          }
+        });
         res.status(200).json({ uploadRankByDepartment });
       } else if (params === "documentTypeRanks") {
+        let documentTypeRanks = documentTypeRank.sort(compare);
+        documentTypeRanks.forEach(item => {
+          if (item.documentType.length > 10) {
+            item.documentType = item.documentType.slice(0, 10);
+          }
+        });
         res.status(200).json({ documentTypeRanks });
       } else if (params === "summaryStatus") {
         res.status(200).json({ status });
