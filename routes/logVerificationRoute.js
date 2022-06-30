@@ -3,7 +3,7 @@ const logVerificationController = require("../controllers/logVerificationControl
 
 const router = express.Router();
 
-router.get("/getLog", logVerificationController.getLog);
+router.get("/getLog/:systemName/:params", logVerificationController.getLog);
 router.post("/createLogVerify", logVerificationController.createLogVerify);
 router.put("/cancelVerify", logVerificationController.cancelVerify);
 router.put("/editVerify", logVerificationController.editVerify);

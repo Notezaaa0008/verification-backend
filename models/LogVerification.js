@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
+      systemName: {
+        type: DataTypes.ENUM,
+        values: ["abbyy", "ocr"],
+        allowNull: false
+      },
       startVerification: {
         type: DataTypes.DATE,
         allowNull: false
@@ -42,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
 
   LogVerification.associate = models => {
     LogVerification.belongsTo(models.User, {
+      as: "UserName",
       foreignKey: {
         name: "userId",
         allowNull: false
@@ -50,14 +56,15 @@ module.exports = (sequelize, DataTypes) => {
       onUpdate: "CASCADE"
     });
 
-    // LogVerification.belongsTo(models.User, {
-    //   foreignKey: {
-    //     name: "editorId",
-    //     allowNull: true
-    //   },
-    //   onDelete: "CASCADE",
-    //   onUpdate: "CASCADE"
-    // });
+    LogVerification.belongsTo(models.User, {
+      as: "EditorName",
+      foreignKey: {
+        name: "editorId",
+        allowNull: true
+      },
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE"
+    });
   };
 
   return LogVerification;
