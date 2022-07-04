@@ -2,6 +2,7 @@ const { LogVerification } = require("../models");
 const xml2js = require("xml2js");
 const fs = require("fs");
 const { Op } = require("sequelize");
+const e = require("express");
 
 const parser = new xml2js.Parser();
 
@@ -145,6 +146,25 @@ exports.getData = async (req, res, next) => {
             });
           }
         }
+      } else if (dataLog.documentStatus === "draft") {
+        let xmlFiles = fs.readdirSync(`./public/saveDraft`);
+        if (!xmlFiles.includes(projectName)) {
+          res.status(400).json({ message: `The ${projectName} does NOT exist` });
+        } else {
+          let project = fs.readdirSync(`./public/saveDraft/${projectName}`);
+          if (!project.includes(`${documentName}.xml`)) {
+            res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
+          } else {
+            let xml_string = fs.readFileSync(`./public/saveDraft/${projectName}/${documentName}.xml`, "utf8");
+            parser.parseString(xml_string, function (error, result) {
+              if (error === null) {
+                res.status(200).json({ data: result, logVerifyId: dataLog.id });
+              } else {
+                console.log(error);
+              }
+            });
+          }
+        }
       }
     } else {
       res.status(400).json({
@@ -159,8 +179,7 @@ exports.getData = async (req, res, next) => {
 exports.updateDoc = async (req, res, next) => {
   try {
     const { projectName, documentName } = req.params;
-    const { oldValue, currentValue, systemName } = req.body;
-    console.log(systemName);
+    const { oldValue, currentValue, systemName, logVerifyId, data } = req.body;
     if (systemName.toLowerCase() === "abbyy") {
       let xmlFiles = fs.readdirSync(`./public/dataFile/xmlFile`);
       if (!xmlFiles.includes(projectName)) {
@@ -172,7 +191,7 @@ exports.updateDoc = async (req, res, next) => {
         } else {
           let dataLog = await LogVerification.findOne({
             where: {
-              id: req.body.logVerifyId,
+              id: logVerifyId,
               projectName,
               documentName
             }
@@ -186,7 +205,7 @@ exports.updateDoc = async (req, res, next) => {
 
             // convert JSON objec to XML
             const builder = new xml2js.Builder();
-            const xml = builder.buildObject(req.body.data);
+            const xml = builder.buildObject(data);
 
             // write updated XML string to a file
             fs.writeFile(`./public/dataFile/xmlFileVerified/${projectName}/${documentName}.xml`, xml, err => {
@@ -204,8 +223,17 @@ exports.updateDoc = async (req, res, next) => {
                 oldValue: JSON.stringify(oldValue),
                 currentValue: JSON.stringify(currentValue)
               },
-              { where: { id: req.body.logVerifyId } }
+              { where: { id: logVerifyId } }
             );
+            let xmlFiles = fs.readdirSync(`./public/saveDraft`);
+            if (xmlFiles.includes(projectName)) {
+              let project = fs.readdirSync(`./public/saveDraft/${projectName}`);
+              if (project.includes(`${documentName}.xml`)) {
+                let dir = `public/saveDraft/${projectName}/${documentName}`;
+                fs.unlinkSync(dir);
+              }
+            }
+
             res.status(200).json({
               message: `Update success`
             });
@@ -219,7 +247,7 @@ exports.updateDoc = async (req, res, next) => {
     } else if (systemName.toLowerCase() === "ocr") {
       let dataLog = await LogVerification.findOne({
         where: {
-          id: req.body.logVerifyId,
+          id: logVerifyId,
           projectName,
           documentName
         }
@@ -251,8 +279,17 @@ exports.updateDoc = async (req, res, next) => {
             oldValue: JSON.stringify(oldValue),
             currentValue: JSON.stringify(currentValue)
           },
-          { where: { id: req.body.logVerifyId } }
+          { where: { id: logVerifyId } }
         );
+
+        // let xmlFiles = fs.readdirSync(`./public/saveDraft`);
+        // if (xmlFiles.includes(projectName)) {
+        //   let project = fs.readdirSync(`./public/saveDraft/${projectName}`);
+        //   if (project.includes(`${documentName}.xml`)) {
+        //     let dir = `public/saveDraft/${projectName}/${documentName}`;
+        //     fs.unlinkSync(dir);
+        //   }
+        // }
         res.status(200).json({
           message: `Update success`
         });
@@ -285,6 +322,73 @@ exports.original = async (req, res, next) => {
           } else {
             console.log(error);
           }
+        });
+      }
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.saveDraft = async (req, res, next) => {
+  try {
+    const { projectName, documentName } = req.params;
+    const { data, systemName, logVerifyId } = req.body;
+
+    if (systemName.toLowerCase() === "abbyy") {
+      let dataLog = await LogVerification.findOne({
+        where: { userId: 2, projectName, documentName, documentStatus: "verifying" }
+      });
+      if (dataLog) {
+        let dir = `public/saveDraft/${projectName}`;
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+
+        // convert JSON objec to XML
+        const builder = new xml2js.Builder();
+        const xml = builder.buildObject(data);
+
+        // write updated XML string to a file
+        fs.writeFile(`./public/dataFile/${projectName}/${documentName}.xml`, xml, err => {
+          if (err) {
+            throw err;
+          }
+          console.log(`save draft success.`);
+        });
+        await LogVerification.update(
+          {
+            documentStatus: "draft"
+          },
+          { where: { id: req.body.logVerifyId } }
+        );
+        res.status(200).json({
+          message: `Save draft success`
+        });
+      }
+    } else if (systemName.toLowerCase() === "ocr") {
+      let dataLog = await LogVerification.findOne({
+        where: { userId: 2, projectName, documentName, documentStatus: "verifying" }
+      });
+      if (dataLog) {
+        let dir = `public/saveDraft/${projectName}`;
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        fs.writeFile(`./public/dataFile/${projectName}/${documentName}.txt`, data, err => {
+          if (err) {
+            throw err;
+          }
+          console.log(`save draft success.`);
+        });
+        await LogVerification.update(
+          {
+            documentStatus: "draft"
+          },
+          { where: { id: logVerifyId } }
+        );
+        res.status(200).json({
+          message: `Save draft success`
         });
       }
     }

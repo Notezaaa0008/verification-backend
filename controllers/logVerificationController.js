@@ -6,7 +6,7 @@ const cron = require("node-cron");
 
 const parser = new xml2js.Parser();
 
-cron.schedule("0 0 * * *", async function cancelTimeOut(req, res, next) {
+cron.schedule("*/60 * * * *", async function cancelTimeOut(req, res, next) {
   try {
     let data = await LogVerification.findAll({
       where: {

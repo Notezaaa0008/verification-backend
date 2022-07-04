@@ -1,5 +1,6 @@
 const { LogEasyOcr, User } = require("../models");
 const { Op } = require("sequelize");
+const cron = require("node-cron");
 
 exports.createLog = async (req, res, next) => {
   try {
