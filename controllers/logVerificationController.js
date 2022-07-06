@@ -6,11 +6,11 @@ const cron = require("node-cron");
 
 const parser = new xml2js.Parser();
 
-cron.schedule("*/60 * * * *", async function cancelTimeOut(req, res, next) {
+cron.schedule("0 0 * * *", async function cancelTimeOut(req, res, next) {
   try {
     let data = await LogVerification.findAll({
       where: {
-        documentStatus: "verifying"
+        documentStatus: { [Op.or]: ["verifying", "draft"] }
       }
     });
     if (data.length > 0) {
@@ -51,7 +51,11 @@ exports.createLogVerify = async (req, res, next) => {
         } else {
           let dataLog = await LogVerification.findAll({
             where: {
-              [Op.and]: [{ projectName }, { documentName }, { documentStatus: { [Op.or]: ["verifying", "verified"] } }]
+              [Op.and]: [
+                { projectName },
+                { documentName },
+                { documentStatus: { [Op.or]: ["verifying", "verified", "draft"] } }
+              ]
             },
             order: [["startVerification", "DESC"]]
           });
