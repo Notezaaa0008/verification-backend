@@ -14,9 +14,21 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
+      statusCa: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+      sendCa: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
       documentType: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      errorDescription: {
+        type: DataTypes.STRING,
+        allowNull: true
       }
     },
     {

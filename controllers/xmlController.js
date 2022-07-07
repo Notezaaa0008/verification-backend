@@ -113,21 +113,6 @@ exports.getData = async (req, res, next) => {
           if (!project.includes(`${documentName}.xml`)) {
             res.status(400).json({ message: `The ${documentName}.xml does NOT exist` });
           } else {
-            let files = fs.readdirSync(`./public/saveDraft/abbyy`);
-            if (files.includes(projectName)) {
-              let projectFiles = fs.readdirSync(`./public/saveDraft/abbyy/${projectName}`);
-              if (projectFiles.includes(`${documentName}.xml`)) {
-                let xml_string = fs.readFileSync(`./public/saveDraft/abbyy/${projectName}/${documentName}.xml`, "utf8");
-                parser.parseString(xml_string, function (error, result) {
-                  if (error === null) {
-                    res.status(200).json({ data: result, logVerifyId: dataLog.id });
-                  } else {
-                    console.log(error);
-                  }
-                });
-              }
-            }
-
             let xml_string = fs.readFileSync(`./public/dataFile/xmlFile/${projectName}/${documentName}.xml`, "utf8");
             parser.parseString(xml_string, function (error, result) {
               if (error === null) {
@@ -268,7 +253,10 @@ exports.updateDoc = async (req, res, next) => {
           fs.mkdirSync(dir, { recursive: true });
         }
 
-        fs.writeFileSync(`./public/dataFile/easyOCRFileVerified/${projectName}/${documentName}.json`, data);
+        fs.writeFileSync(
+          `./public/dataFile/easyOCRFileVerified/${projectName}/${documentName}.json`,
+          JSON.stringify(data)
+        );
 
         const date = new Date();
         await LogVerification.update(
@@ -369,7 +357,7 @@ exports.saveDraft = async (req, res, next) => {
         if (!fs.existsSync(dir)) {
           fs.mkdirSync(dir, { recursive: true });
         }
-        fs.writeFileSync(`./public/saveDraft/ocr/${projectName}/${documentName}.json`, data);
+        fs.writeFileSync(`./public/saveDraft/ocr/${projectName}/${documentName}.json`, JSON.stringify(data));
         await LogVerification.update(
           {
             documentStatus: "draft"

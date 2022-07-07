@@ -4,8 +4,16 @@ const cron = require("node-cron");
 
 exports.createLog = async (req, res, next) => {
   try {
-    let { statusOcr, documentType, userId, projectName, documentName } = req.body;
-    let create = await LogEasyOcr.create({ statusOcr, documentType, userId, projectName, documentName });
+    let { statusOcr, documentType, userId, projectName, documentName, sendCa, statusCa } = req.body;
+    let create = await LogEasyOcr.create({
+      statusOcr,
+      documentType,
+      userId,
+      projectName,
+      documentName,
+      sendCa,
+      statusCa
+    });
     res.status(201).json(create);
   } catch (err) {
     next(err);
@@ -34,8 +42,8 @@ exports.getLog = async (req, res, next) => {
               ...userRank,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 user: [{ name: `${item.User.firstName} ${item.User.lastName}`, upload: 1 }]
               }
             ];
@@ -45,7 +53,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -63,10 +71,10 @@ exports.getLog = async (req, res, next) => {
                 ...userRank,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   user: [{ name: `${item.User.firstName} ${item.User.lastName}`, upload: 1 }]
                 }
               ];
@@ -88,8 +96,8 @@ exports.getLog = async (req, res, next) => {
               ...departmentRank,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 department: [{ departmentName: `${item.User.department}`, upload: 1 }]
               }
             ];
@@ -99,7 +107,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -119,10 +127,10 @@ exports.getLog = async (req, res, next) => {
                 ...departmentRank,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   department: [{ departmentName: `${item.User.department}`, upload: 1 }]
                 }
               ];
@@ -144,8 +152,8 @@ exports.getLog = async (req, res, next) => {
               ...documentTypeRank,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 documentType: [{ typeName: `${item.documentType}`, upload: 1 }]
               }
             ];
@@ -155,7 +163,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -172,10 +180,10 @@ exports.getLog = async (req, res, next) => {
                 ...documentTypeRank,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   documentType: [{ typeName: `${item.documentType}`, upload: 1 }]
                 }
               ];
@@ -192,16 +200,32 @@ exports.getLog = async (req, res, next) => {
       } else if (params === "summaryStatus") {
         let status = [];
         data.forEach(item => {
+          console.log();
           if (status.length === 0) {
             status = [
               ...status,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
-                success: item.statusOcr.toLowerCase() === "success" ? 1 : 0,
-                fail: item.statusOcr.toLowerCase() === "fail" ? 1 : 0,
-                inprogress: item.statusOcr.toLowerCase() === "inprogress" ? 1 : 0
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
+                success:
+                  item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "success"
+                    ? 1
+                    : item.statusOcr.toLowerCase() === "success" && !item.statusCa
+                    ? 1
+                    : 0,
+                fail:
+                  item.statusOcr.toLowerCase() === "fail"
+                    ? 1
+                    : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "fail"
+                    ? 1
+                    : 0,
+                inprogress:
+                  item.statusOcr.toLowerCase() === "inprogress" && item.statusCa
+                    ? 1
+                    : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "inprogress"
+                    ? 1
+                    : 0
               }
             ];
           } else {
@@ -210,25 +234,52 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
             );
             if (exist.length > 0) {
-              exist[0][item.statusOcr.toLowerCase()] = +exist[0][item.statusOcr.toLowerCase()] + 1;
+              if (item.statusOcr.toLowerCase() === "success") {
+                if (!item.statusCa || item.statusCa.toLowerCase() === "success") {
+                  exist[0].success = +exist[0].success + 1;
+                } else if (!item.statusCa || item.statusCa.toLowerCase() === "fail") {
+                  exist[0].fail = +exist[0].fail + 1;
+                } else if (!item.statusCa || item.statusCa.toLowerCase() === "inprogress") {
+                  exist[0].inprogress = +exist[0].inprogress + 1;
+                }
+              } else if (item.statusOcr.toLowerCase() === "fail") {
+                exist[0].fail = +exist[0].fail + 1;
+              } else if (item.statusOcr.toLowerCase() === "inprogress") {
+                exist[0].inprogress = +exist[0].inprogress + 1;
+              }
             } else {
               status = [
                 ...status,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
-                  success: item.statusOcr.toLowerCase() === "success" ? 1 : 0,
-                  fail: item.statusOcr.toLowerCase() === "fail" ? 1 : 0,
-                  inprogress: item.statusOcr.toLowerCase() === "inprogress" ? 1 : 0
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
+                  success:
+                    item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "success"
+                      ? 1
+                      : item.statusOcr.toLowerCase() === "success" && !item.statusCa
+                      ? 1
+                      : 0,
+                  fail:
+                    item.statusOcr.toLowerCase() === "fail"
+                      ? 1
+                      : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "fail"
+                      ? 1
+                      : 0,
+                  inprogress:
+                    item.statusOcr.toLowerCase() === "inprogress" && item.statusCa
+                      ? 1
+                      : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "inprogress"
+                      ? 1
+                      : 0
                 }
               ];
             }

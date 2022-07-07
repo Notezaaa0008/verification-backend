@@ -32,8 +32,8 @@ exports.getLog = async (req, res, next) => {
               ...sendToKmp,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 numOfSend: 1
               }
             ];
@@ -43,7 +43,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -55,10 +55,10 @@ exports.getLog = async (req, res, next) => {
                 ...sendToKmp,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   numOfSend: 1
                 }
               ];
@@ -74,8 +74,8 @@ exports.getLog = async (req, res, next) => {
               ...statusKmp,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 success: item.statusKmp.toLowerCase() === "success" ? 1 : 0,
                 fail: item.statusKmp.toLowerCase() === "fail" ? 1 : 0,
                 inprogress: item.statusKmp.toLowerCase() === "inprogress" ? 1 : 0
@@ -87,7 +87,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -99,10 +99,10 @@ exports.getLog = async (req, res, next) => {
                 ...statusKmp,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   success: item.statusKmp.toLowerCase() === "success" ? 1 : 0,
                   fail: item.statusKmp.toLowerCase() === "fail" ? 1 : 0,
                   inprogress: item.statusKmp.toLowerCase() === "inprogress" ? 1 : 0
@@ -120,8 +120,8 @@ exports.getLog = async (req, res, next) => {
               ...userRank,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 user: [{ name: `${item.User.firstName} ${item.User.lastName}`, upload: 1 }]
               }
             ];
@@ -131,7 +131,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -148,10 +148,10 @@ exports.getLog = async (req, res, next) => {
                 ...userRank,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   user: [{ name: `${item.User.firstName} ${item.User.lastName}`, upload: 1 }]
                 }
               ];
@@ -173,8 +173,8 @@ exports.getLog = async (req, res, next) => {
               ...departmentRank,
               {
                 date: `${item.updatedAt.getFullYear()}${
-                  item.updatedAt.getMonth() < 9 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
-                }${item.updatedAt.getDate()}`,
+                  item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
+                }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 department: [{ departmentName: `${item.User.department}`, upload: 1 }]
               }
             ];
@@ -184,7 +184,7 @@ exports.getLog = async (req, res, next) => {
                 ele.date.slice(0, 4) === `${item.updatedAt.getFullYear()}` &&
                 ele.date.slice(4, 6) ===
                   `${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
                   }`
@@ -204,10 +204,10 @@ exports.getLog = async (req, res, next) => {
                 ...departmentRank,
                 {
                   date: `${item.updatedAt.getFullYear()}${
-                    item.updatedAt.getMonth() < 9
+                    item.updatedAt.getMonth() < 10
                       ? "0" + (item.updatedAt.getMonth() + 1)
                       : item.updatedAt.getMonth() + 1
-                  }${item.updatedAt.getDate()}`,
+                  }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   department: [{ departmentName: `${item.User.department}`, upload: 1 }]
                 }
               ];

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<form:Documents xmlns:form="http://www.abbyy.com/FlexiCapture/Schemas/Export/FormData.xsd" xmlns:addData="http://www.abbyy.com/FlexiCapture/Schemas/Export/AdditionalFormData.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_INVOICE:_INVOICE addData:ImagePath="684_00000001_8079473410_2022-04-20_08-45-01.pdfe" xmlns:_INVOICE="http://www.abbyy.com/FlexiCapture/Schemas/Export/INVOICE.xsd">
+    <_Document>
+      <_TaxInvoiceNo addData:BlockRef="0002e">0173-12102139e</_TaxInvoiceNo>
+      <_InvoiceNo>8079473410e</_InvoiceNo>
+      <_InvoiceDate>13.12.2021</_InvoiceDate>
+      <_TaxInvoiceDate>13.12.2021</_TaxInvoiceDate>
+      <_VendorName>บริษัท ปตท. น้ำมันและการค้าปลีก จำกัด (มหาชน)</_VendorName>
+      <_VendorAddress>555/2 ศูนย์เอนเนอร์ยี่คอมเพล็กซ์ อาคารบี ชั้นที่ 12 ถนนวิภาวดีรังสิต แขวงจตุจักร เขตจตุจักร กรุงเทพฯ 10900</_VendorAddress>
+      <_VendorTaxNo>0107561000013</_VendorTaxNo>
+      <_CustomerName>บริษัท ปตท. จำกัด(มหาชน)</_CustomerName>
+      <_CustomerAddress>555 ถนนวิภาวดีรังสิต แขวงจตุจักร เขตจตุจักร กรุงเทพมหานคร 10900</_CustomerAddress>
+      <_CustomerTaxID>0107544000108</_CustomerTaxID>
+      <_BusinessPlace>0173 คลังน้ำมันพระโขนง</_BusinessPlace>
+      <_Plant>H102 คลังน้ำมันพระโขนง</_Plant>
+      <_Items addData:BlockRef="0003">
+        <_ItemNo addData:BlockRef="0004">1</_ItemNo>
+        <_ProductCode>500031</_ProductCode>
+        <_ProductName>HSD B7 EURO IV 0.005%S with Add.</_ProductName>
+        <_Quantity>4,000</_Quantity>
+        <_Unit>L</_Unit>
+        <_UnitPrice>25.4420</_UnitPrice>
+        <_Amount>101,768.00</_Amount>
+        <_VolAtDes/>
+        <_API>38.00</_API>
+      </_Items>
+      <_Items>
+        <_ItemNo>2</_ItemNo>
+        <_ProductCode>500018</_ProductCode>
+        <_ProductName>Gasohol 95 E-10 with Add.</_ProductName>
+        <_Quantity>8,000</_Quantity>
+        <_Unit>L</_Unit>
+        <_UnitPrice>27.5977</_UnitPrice>
+        <_Amount>220,781.60</_Amount>
+        <_VolAtDes/>
+        <_API>57.00</_API>
+      </_Items>
+      <_Items>
+        <_ItemNo/>
+        <_ProductCode/>
+        <_ProductName>ค่าขนส่ง</_ProductName>
+        <_Quantity/>
+        <_Unit/>
+        <_UnitPrice/>
+        <_Amount>1,200.00</_Amount>
+        <_VolAtDes/>
+        <_API/>
+      </_Items>
+      <_AmountBeforeVAT>323,749.60</_AmountBeforeVAT>
+      <_ValueAddTax>22,662.47</_ValueAddTax>
+      <_AmountAfterVAT>346,412.07</_AmountAfterVAT>
+      <_Issuer>true</_Issuer>
+      <_CorrectBy>true</_CorrectBy>
+      <_DueDate>15.02.2022</_DueDate>
+      <_CorrectByDate>true</_CorrectByDate>
+      <_SourceFile>\\ptt-ocrfile-t01.ptt.corp\OCRDev\PTT\Finance And Accounting\Oil Invoice\2 Inputs\SN\Normal\INV_ch610273_S1_2022011209113000028_001.pdf</_SourceFile>
+      <_ChannelNormal>true</_ChannelNormal>
+      <_OriginalFileStatus>true</_OriginalFileStatus>
+      <_TotalAmount>346,412.07</_TotalAmount>
+      <_BatchID>684</_BatchID>
+      <_ShipTo>COCO-6103 สำนักงานใหญ่ 555 ถ.วิภาวดี-รังสิต เขตจตุจักร กรุงเทพมหานคร 10900</_ShipTo>
+      <_CustomerCodeTmp>0010010648</_CustomerCodeTmp>
+    </_Document>
+  </_INVOICE:_INVOICE>
+</form:Documents>
