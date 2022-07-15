@@ -38,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
       currentValue: {
         type: DataTypes.TEXT,
         allowNull: true
+      },
+      editorId: {
+        type: DataTypes.TEXT,
+        allowNull: true
       }
     },
     {
@@ -56,15 +60,15 @@ module.exports = (sequelize, DataTypes) => {
       onUpdate: "CASCADE"
     });
 
-    LogVerification.belongsTo(models.User, {
-      as: "EditorName",
-      foreignKey: {
-        name: "editorId",
-        allowNull: true
-      },
-      onDelete: "CASCADE",
-      onUpdate: "CASCADE"
-    });
+    // LogVerification.belongsTo(models.User, {
+    //   as: "EditorName",
+    //   foreignKey: {
+    //     name: "editorId",
+    //     allowNull: true
+    //   },
+    //   onDelete: "CASCADE",
+    //   onUpdate: "CASCADE"
+    // });
   };
 
   return LogVerification;

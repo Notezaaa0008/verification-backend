@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const StatusDocAbbyy = sequelize.define(
-    "StatusDocAbbyy",
+  const NotificationAbbyy = sequelize.define(
+    "NotificationAbbyy",
     {
       projectName: {
         type: DataTypes.STRING,
@@ -10,13 +10,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
-      status: {
-        type: DataTypes.STRING,
+      notificationStatus: {
+        type: DataTypes.BOOLEAN,
         allowNull: false
       },
-      documentCount: {
+      StatusDocId: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        unique: true
       }
     },
     {
@@ -24,5 +25,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return StatusDocAbbyy;
+  return NotificationAbbyy;
 };

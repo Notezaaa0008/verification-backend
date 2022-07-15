@@ -90,7 +90,7 @@ cron.schedule("*/60 * * * *", async function getDataAbbyy(req, res, next) {
   try {
     let status = await StatusDocAbbyy.findAll({
       where: {
-        status: "complete",
+        status: "exported",
         notificationStatus: false
       },
       order: [["priority", "DESC"]]

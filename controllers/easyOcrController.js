@@ -209,21 +209,25 @@ exports.getLog = async (req, res, next) => {
                   item.updatedAt.getMonth() < 10 ? "0" + (item.updatedAt.getMonth() + 1) : item.updatedAt.getMonth() + 1
                 }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                 success:
-                  item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "success"
+                  item.sendCa && item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "success"
                     ? 1
-                    : item.statusOcr.toLowerCase() === "success" && !item.statusCa
+                    : !item.sendCa && item.statusOcr.toLowerCase() === "success"
                     ? 1
                     : 0,
                 fail:
                   item.statusOcr.toLowerCase() === "fail"
                     ? 1
-                    : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "fail"
+                    : item.sendCa &&
+                      item.statusOcr.toLowerCase() === "success" &&
+                      item.statusCa.toLowerCase() === "fail"
                     ? 1
                     : 0,
                 inprogress:
-                  item.statusOcr.toLowerCase() === "inprogress" && item.statusCa
+                  item.statusOcr.toLowerCase() === "inprogress"
                     ? 1
-                    : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "inprogress"
+                    : item.sendCa &&
+                      item.statusOcr.toLowerCase() === "success" &&
+                      item.statusCa.toLowerCase() === "inprogress"
                     ? 1
                     : 0
               }
@@ -241,12 +245,16 @@ exports.getLog = async (req, res, next) => {
             );
             if (exist.length > 0) {
               if (item.statusOcr.toLowerCase() === "success") {
-                if (!item.statusCa || item.statusCa.toLowerCase() === "success") {
+                if (item.sendCa) {
+                  if (item.statusCa.toLowerCase() === "success") {
+                    exist[0].success = +exist[0].success + 1;
+                  } else if (item.statusCa.toLowerCase() === "fail") {
+                    exist[0].fail = +exist[0].fail + 1;
+                  } else if (item.statusCa.toLowerCase() === "inprogress") {
+                    exist[0].inprogress = +exist[0].inprogress + 1;
+                  }
+                } else {
                   exist[0].success = +exist[0].success + 1;
-                } else if (!item.statusCa || item.statusCa.toLowerCase() === "fail") {
-                  exist[0].fail = +exist[0].fail + 1;
-                } else if (!item.statusCa || item.statusCa.toLowerCase() === "inprogress") {
-                  exist[0].inprogress = +exist[0].inprogress + 1;
                 }
               } else if (item.statusOcr.toLowerCase() === "fail") {
                 exist[0].fail = +exist[0].fail + 1;
@@ -263,21 +271,27 @@ exports.getLog = async (req, res, next) => {
                       : item.updatedAt.getMonth() + 1
                   }${item.updatedAt.getDate() < 10 ? "0" + item.updatedAt.getDate() : item.updatedAt.getDate()}`,
                   success:
-                    item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "success"
+                    item.sendCa &&
+                    item.statusOcr.toLowerCase() === "success" &&
+                    item.statusCa.toLowerCase() === "success"
                       ? 1
-                      : item.statusOcr.toLowerCase() === "success" && !item.statusCa
+                      : !item.sendCa && item.statusOcr.toLowerCase() === "success"
                       ? 1
                       : 0,
                   fail:
                     item.statusOcr.toLowerCase() === "fail"
                       ? 1
-                      : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "fail"
+                      : item.sendCa &&
+                        item.statusOcr.toLowerCase() === "success" &&
+                        item.statusCa.toLowerCase() === "fail"
                       ? 1
                       : 0,
                   inprogress:
-                    item.statusOcr.toLowerCase() === "inprogress" && item.statusCa
+                    item.statusOcr.toLowerCase() === "inprogress"
                       ? 1
-                      : item.statusOcr.toLowerCase() === "success" && item.statusCa.toLowerCase() === "inprogress"
+                      : item.sendCa &&
+                        item.statusOcr.toLowerCase() === "success" &&
+                        item.statusCa.toLowerCase() === "inprogress"
                       ? 1
                       : 0
                 }

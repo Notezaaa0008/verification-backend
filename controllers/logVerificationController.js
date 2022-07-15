@@ -24,26 +24,6 @@ cron.schedule("0 0 * * *", async function cancelTimeOut(req, res, next) {
           `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}` ===
           `${cancelDate.getDate()}/${cancelDate.getMonth() + 1}/${cancelDate.getFullYear()}`
         ) {
-          if (item.systemName === "abbyy") {
-            let xmlFiles = fs.readdirSync(`./public/saveDraft/abbyy`);
-            if (xmlFiles.includes(item.projectName)) {
-              let project = fs.readdirSync(`./public/saveDraft/abbyy/${item.projectName}`);
-              if (project.includes(`${item.documentName}.xml`)) {
-                let dir = `public/saveDraft/abbyy/${item.projectName}/${item.documentName}.xml`;
-                fs.unlinkSync(dir);
-              }
-            }
-          } else if (item.systemName === "ocr") {
-            let files = fs.readdirSync(`./public/saveDraft/ocr`);
-            if (files.includes(item.projectName)) {
-              let project = fs.readdirSync(`./public/saveDraft/ocr/${item.projectName}`);
-              if (project.includes(`${item.documentName}.json`)) {
-                let dir = `public/saveDraft/ocr/${item.projectName}/${item.documentName}.json`;
-                fs.unlinkSync(dir);
-              }
-            }
-          }
-
           await LogVerification.update(
             { documentStatus: "cancel", cancelVerification: currentDate },
             { where: { id: item.id } }
@@ -74,7 +54,7 @@ exports.createLogVerify = async (req, res, next) => {
               [Op.and]: [
                 { projectName },
                 { documentName },
-                { documentStatus: { [Op.or]: ["verifying", "verified", "draft"] } }
+                { documentStatus: { [Op.or]: ["verifying", "verified", "draft", "edit"] } }
               ]
             },
             order: [["startVerification", "DESC"]]
@@ -82,14 +62,15 @@ exports.createLogVerify = async (req, res, next) => {
           if (dataLog.length > 0) {
             res.status(400).json({ message: `Someone has reviewed this ${documentName}.` });
           } else {
-            let date = new Date(); //2023, 06, 07
+            let date = new Date();
             let createLogVerify = await LogVerification.create({
               systemName: "abbyy",
               userId,
               projectName,
               documentName,
               documentStatus: "verifying",
-              startVerification: date
+              startVerification: date,
+              editorId: JSON.stringify([userId])
             });
             res.status(201).json({ message: "create log verification success", createLogVerify });
           }
@@ -101,7 +82,7 @@ exports.createLogVerify = async (req, res, next) => {
           [Op.and]: [
             { projectName },
             { documentName },
-            { documentStatus: { [Op.or]: ["verifying", "verified", "draft"] } }
+            { documentStatus: { [Op.or]: ["verifying", "verified", "draft", "edit"] } }
           ]
         },
         order: [["startVerification", "DESC"]]
@@ -109,14 +90,15 @@ exports.createLogVerify = async (req, res, next) => {
       if (dataLog.length > 0) {
         res.status(400).json({ message: `Someone has reviewed this ${documentName}.` });
       } else {
-        let date = new Date(); //2023, 06, 07
+        let date = new Date();
         let createLogVerify = await LogVerification.create({
           systemName: "ocr",
           userId,
           projectName,
           documentName,
           documentStatus: "verifying",
-          startVerification: date
+          startVerification: date,
+          editorId: JSON.stringify([userId])
         });
         res.status(201).json({ message: "create log verification success", createLogVerify });
       }
@@ -128,9 +110,30 @@ exports.createLogVerify = async (req, res, next) => {
 
 exports.editVerify = async (req, res, next) => {
   try {
-    const { logVerifyId } = req.body;
-    let editLog = await LogVerification.update({ documentStatus: "edit", editorId: 1 }, { where: { id: logVerifyId } });
-    res.status(200).json({ editLog });
+    const { logVerifyId, userId, test } = req.body;
+    let verifyLog = await LogVerification.findOne({
+      where: { id: logVerifyId, documentStatus: "edit" }
+    });
+
+    if (verifyLog) {
+      let editorId = JSON.parse(verifyLog.editorId);
+      let editLog = await LogVerification.update(
+        { editorId: JSON.stringify(editorId.push(userId)), userId },
+        { where: { id: logVerifyId } }
+      );
+      res.status(200).json({ message: "edit success" });
+    } else {
+      let editor = await LogVerification.findOne({
+        where: { id: logVerifyId }
+      });
+      let editorId = JSON.parse(editor.editorId);
+
+      let editLog = await LogVerification.update(
+        { documentStatus: "edit", editorId: JSON.stringify(editorId.push(userId)), userId },
+        { where: { id: logVerifyId } }
+      );
+      res.status(200).json({ message: "edit success" });
+    }
   } catch (err) {
     next(err);
   }
@@ -138,32 +141,13 @@ exports.editVerify = async (req, res, next) => {
 
 exports.cancelVerify = async (req, res, next) => {
   try {
-    const { logVerifyId, systemName, projectName, documentName } = req.body;
-    if (systemName === "abbyy") {
-      let xmlFiles = fs.readdirSync(`./public/saveDraft/abbyy`);
-      if (xmlFiles.includes(projectName)) {
-        let project = fs.readdirSync(`./public/saveDraft/abbyy/${projectName}`);
-        if (project.includes(`${documentName}.xml`)) {
-          let dir = `public/saveDraft/abbyy/${projectName}/${documentName}.xml`;
-          fs.unlinkSync(dir);
-        }
-      }
-    } else if (systemName === "ocr") {
-      let files = fs.readdirSync(`./public/saveDraft/ocr`);
-      if (files.includes(projectName)) {
-        let project = fs.readdirSync(`./public/saveDraft/ocr/${projectName}`);
-        if (project.includes(`${documentName}.json`)) {
-          let dir = `public/saveDraft/ocr/${projectName}/${documentName}.json`;
-          fs.unlinkSync(dir);
-        }
-      }
-    }
+    const { logVerifyId } = req.body;
     let date = new Date();
     let cancelLog = await LogVerification.update(
       { documentStatus: "cancel", cancelVerification: date },
       { where: { id: logVerifyId } }
     );
-    res.status(200).json({ message: "cancel success", cancelLog });
+    res.status(200).json({ message: "cancel success" });
   } catch (err) {
     next(err);
   }
@@ -204,7 +188,6 @@ exports.getLog = async (req, res, next) => {
     });
     let timeVerified = [];
     let dataForAver = [];
-
     if (dataLog.length > 0) {
       dataLog.forEach(item => {
         let startDate = new Date(item.startVerification);
@@ -389,6 +372,7 @@ exports.getCompareValue = async (req, res, next) => {
     next(err);
   }
 };
+
 // let checkObject = (oldFile, newFile) => {
 //   let old = {};
 //   let current = {};
